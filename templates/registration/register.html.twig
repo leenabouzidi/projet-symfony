@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+{% block title %}Register - Our Store{% endblock %}
+{% block body %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body p-5">
+                    <h2 class="card-title mb-4">Create an Account</h2>
+
+                    {% for flash in app.flashes('success') %}
+                        <div class="alert alert-success">{{ flash }}</div>
+                    {% endfor %}
+
+                    {% for flash in app.flashes('error') %}
+                        <div class="alert alert-danger">{{ flash }}</div>
+                    {% endfor %}
+
+                    {{ form_start(registrationForm) }}
+                        <div class="mb-3">
+                            {{ form_label(registrationForm.email) }}
+                            {{ form_widget(registrationForm.email) }}
+                            {{ form_errors(registrationForm.email) }}
+                        </div>
+                        <div class="mb-3">
+                            {{ form_label(registrationForm.plainPassword.first) }}
+                            {{ form_widget(registrationForm.plainPassword.first) }}
+                            {{ form_errors(registrationForm.plainPassword.first) }}
+                        </div>
+                        <div class="mb-3">
+                            {{ form_label(registrationForm.plainPassword.second) }}
+                            {{ form_widget(registrationForm.plainPassword.second) }}
+                            {{ form_errors(registrationForm.plainPassword.second) }}
+                        </div>
+                        {{ form_errors(registrationForm) }}
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-success btn-lg">Sign Up</button>
+                        </div>
+                    {{ form_end(registrationForm) }}
+
+                    <hr class="my-4">
+                    <p class="text-center text-muted">
+                        Already have an account? <a href="{{ path('app_login') }}">Login</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

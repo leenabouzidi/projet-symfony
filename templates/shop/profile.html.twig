@@ -1,0 +1,100 @@
+{% extends 'base.html.twig' %}
+{% block title %}My Profile - Our Store{% endblock %}
+{% block body %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <img src="https://via.placeholder.com/150" class="rounded-circle mb-3" alt="User Avatar" width="150" height="150">
+                    <h5 class="card-title">John Doe</h5>
+                    <p class="text-muted">john.doe@email.com</p>
+                    <hr>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#profile" class="text-decoration-none">Profile Information</a></li>
+                        <li class="mb-2"><a href="#orders" class="text-decoration-none">My Orders</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Settings</a></li>
+                        <li class="mb-2"><a href="{{ path('app_login') }}" class="text-decoration-none text-danger">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card mb-4" id="profile">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Profile Information</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-md-6"><label class="fw-bold">Full Name:</label><p>John Doe</p></div>
+                        <div class="col-md-6"><label class="fw-bold">Email:</label><p>john.doe@email.com</p></div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6"><label class="fw-bold">Phone:</label><p>+1 (555) 123-4567</p></div>
+                        <div class="col-md-6"><label class="fw-bold">Member Since:</label><p>January 15, 2024</p></div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-12"><label class="fw-bold">Shipping Address:</label><p>123 Main Street, Apt 4B<br>New York, NY 10001</p></div>
+                    </div>
+                    <button class="btn btn-outline-primary">Edit Profile</button>
+                </div>
+            </div>
+            <div class="card" id="orders">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Order History</h5>
+                </div>
+                <div class="card-body">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h6>Order #ORD-2024-001</h6>
+                                    <p class="text-muted mb-2">Placed on: February 10, 2024</p>
+                                    <p class="mb-1"><strong>Items:</strong> Wireless Headphones, Bluetooth Speaker</p>
+                                    <p class="mb-0"><strong>Total:</strong> $139.98</p>
+                                </div>
+                                <div class="col-md-4 text-md-end">
+                                    <span class="badge bg-success mb-2">Delivered</span><br>
+                                    <a href="#" class="btn btn-sm btn-outline-primary mt-2">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h6>Order #ORD-2024-002</h6>
+                                    <p class="text-muted mb-2">Placed on: February 5, 2024</p>
+                                    <p class="mb-1"><strong>Items:</strong> Classic Leather Jacket</p>
+                                    <p class="mb-0"><strong>Total:</strong> $149.99</p>
+                                </div>
+                                <div class="col-md-4 text-md-end">
+                                    <span class="badge bg-info mb-2">In Transit</span><br>
+                                    <a href="#" class="btn btn-sm btn-outline-primary mt-2">Track Order</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h6>Order #ORD-2024-003</h6>
+                                    <p class="text-muted mb-2">Placed on: January 28, 2024</p>
+                                    <p class="mb-1"><strong>Items:</strong> Yoga Mat, Smart Plant Sensor</p>
+                                    <p class="mb-0"><strong>Total:</strong> $64.98</p>
+                                </div>
+                                <div class="col-md-4 text-md-end">
+                                    <span class="badge bg-warning mb-2">Processing</span><br>
+                                    <a href="#" class="btn btn-sm btn-outline-primary mt-2">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

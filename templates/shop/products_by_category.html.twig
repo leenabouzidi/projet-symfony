@@ -1,0 +1,98 @@
+{% extends 'base.html.twig' %}
+{% block title %}Electronics - Our Store{% endblock %}
+{% block body %}
+<div class="container mt-4">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ path('app_home') }}" class="text-decoration-none">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ path('app_categories') }}" class="text-decoration-none">Categories</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Electronics</li>
+        </ol>
+    </nav>
+</div>
+<div class="container my-4">
+    <div class="p-5 mb-4 bg-primary bg-gradient text-white rounded-3">
+        <h1 class="display-4 fw-bold">Electronics</h1>
+        <p class="col-md-8 fs-5">Discover the latest in technology and electronics.</p>
+        <span class="badge bg-light text-dark fs-6">12 Products Available</span>
+    </div>
+</div>
+<div class="container mb-5">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Wireless Headphones">
+                <div class="card-body">
+                    <span class="badge bg-primary mb-2">Electronics</span>
+                    <h5 class="card-title">Wireless Headphones</h5>
+                    <p class="card-text fw-bold text-success">$79.99</p>
+                    <a href="{{ path('app_product_details', {id: 1}) }}" class="btn btn-outline-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Bluetooth Speaker">
+                <div class="card-body">
+                    <span class="badge bg-primary mb-2">Electronics</span>
+                    <h5 class="card-title">Bluetooth Speaker</h5>
+                    <p class="card-text fw-bold text-success">$59.99</p>
+                    <a href="{{ path('app_product_details', {id: 5}) }}" class="btn btn-outline-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Wireless Mouse">
+                <div class="card-body">
+                    <span class="badge bg-primary mb-2">Electronics</span>
+                    <h5 class="card-title">Wireless Mouse</h5>
+                    <p class="card-text fw-bold text-success">$29.99</p>
+                    <a href="{{ path('app_product_details', {id: 9}) }}" class="btn btn-outline-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Mechanical Keyboard">
+                <div class="card-body">
+                    <span class="badge bg-primary mb-2">Electronics</span>
+                    <h5 class="card-title">Mechanical Keyboard</h5>
+                    <p class="card-text fw-bold text-success">$89.99</p>
+                    <a href="{{ path('app_product_details', {id: 10}) }}" class="btn btn-outline-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Webcam HD">
+                <div class="card-body">
+                    <span class="badge bg-primary mb-2">Electronics</span>
+                    <h5 class="card-title">Webcam HD 1080p</h5>
+                    <p class="card-text fw-bold text-success">$49.99</p>
+                    <a href="{{ path('app_product_details', {id: 11}) }}" class="btn btn-outline-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Power Bank">
+                <div class="card-body">
+                    <span class="badge bg-primary mb-2">Electronics</span>
+                    <h5 class="card-title">Power Bank 20000mAh</h5>
+                    <p class="card-text fw-bold text-success">$39.99</p>
+                    <a href="{{ path('app_product_details', {id: 12}) }}" class="btn btn-outline-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav aria-label="Product pagination" class="mt-5">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </nav>
+</div>
+{% endblock %}

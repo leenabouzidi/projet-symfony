@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+{% block title %}Product Details - Our Store{% endblock %}
+{% block body %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="https://via.placeholder.com/500x400" class="img-fluid rounded" alt="Product">
+        </div>
+        <div class="col-md-6">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ path('app_home') }}" class="text-decoration-none">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Product Details</li>
+                </ol>
+            </nav>
+            <span class="badge bg-primary mb-3">Electronics</span>
+            <h1 class="mb-3">Wireless Headphones</h1>
+            <h3 class="text-success mb-4">$79.99</h3>
+            <div class="mb-4">
+                <h5>Description</h5>
+                <p class="text-muted">Experience premium sound quality with our wireless headphones. Featuring advanced noise cancellation technology, comfortable over-ear design, and up to 30 hours of battery life.</p>
+            </div>
+            <form>
+                <div class="mb-3">
+                    <label for="quantity" class="form-label">Quantity</label>
+                    <input type="number" class="form-control" id="quantity" value="1" min="1" max="10" style="max-width: 100px;">
+                </div>
+                <div class="d-grid gap-2 d-md-flex">
+                    <button type="submit" class="btn btn-primary btn-lg">Add to Cart</button>
+                    <a href="{{ path('app_home') }}" class="btn btn-outline-secondary btn-lg">Continue Shopping</a>
+                </div>
+            </form>
+            <div class="mt-4 pt-4 border-top">
+                <ul class="list-unstyled">
+                    <li class="mb-2"><strong>SKU:</strong> WH-2024-001</li>
+                    <li class="mb-2"><strong>Availability:</strong> <span class="text-success">In Stock</span></li>
+                    <li class="mb-2"><strong>Category:</strong> Electronics</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
